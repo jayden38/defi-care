@@ -130,7 +130,7 @@ contract ERC721Token is
     ) internal virtual override(ERC721, ERC721Enumerable, ERC721Pausable) {
         super._beforeTokenTransfer(from, to, tokenId);
         
-        if(from != address(0) && to != address(0) && address(this) == to) ERC20(_tokenAddress).transferFrom(_owner, from, 100);
+        if(from != address(0) && to != address(0) && address(this) == to) ERC20(_tokenAddress).transferFrom(_owner, from, 1000000);
     }
 
     /**
